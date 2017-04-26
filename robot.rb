@@ -1,7 +1,7 @@
 class Robot
   attr_reader :name
 
-  def initialize(name = 'ABC13')
+  def initialize(name = 'ABC23')
     @name = name
   end
 end
