@@ -25,6 +25,23 @@ describe Robot do
       @robot1.name = 'ABC12' if respond_to? :name=
       expect(@robot1.name).not_to eq('ABC12')
     end
+    it 'first three characters should be strings' do
+      arr = @robot1.name.split('')
+      expect(arr[0]).to be_instance_of String
+      expect(arr[1]).to be_instance_of String
+      expect(arr[2]).to be_instance_of String
+    end
+    it 'first three characters should be uppercase' do
+      arr = @robot1.name.split('')
+      expect(arr[0]).to be(/[A-Z]/)
+      expect(arr[1]).to be(/[A-Z]/)
+      expect(arr[2]).to be(/[A-Z]/)
+    end
+    it 'last two characters should be numbers' do
+      arr = @robot1.name.split('')
+      expect(arr[3].to_i).to be_instance_of FixedNum
+      expect(arr[4].to_i).to be_instance_of FixedNum
+    end
   end
 
   describe 'Robot Army' do
