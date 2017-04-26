@@ -2,7 +2,7 @@ require_relative '../lib/robot.rb'
 
 describe Robot do
   before(:context) do
-    @robot1 = MailBox.new
+    @robot1 = Robot.new
   end
 
   describe 'Initialization' do
