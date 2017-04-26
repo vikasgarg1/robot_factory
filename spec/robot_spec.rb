@@ -52,9 +52,9 @@ describe Robot do
     end
     it 'first three characters should be uppercase' do
       arr = @robot1.name.split('')
-      expect(arr[0]).to be(/[A-Z]/)
-      expect(arr[1]).to be(/[A-Z]/)
-      expect(arr[2]).to be(/[A-Z]/)
+      expect(arr[0]).to be(/^[A-Z]$/)
+      expect(arr[1]).to be(/^[A-Z]$/)
+      expect(arr[2]).to be(/^[A-Z]$/)
     end
     it 'last two characters should be numbers' do
       arr = @robot1.name.split('')
