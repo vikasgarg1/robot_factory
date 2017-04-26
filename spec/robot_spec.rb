@@ -54,4 +54,12 @@ describe Robot do
       expect(robot_names.uniq.count).to eq(1000)
     end
   end
+
+  describe 'Method' do
+    it 'can reset its name' do
+      old_name = @robot1.name
+      @robot1.reset
+      expect(@robot1.name).not_to eq(old_name)
+    end
+  end
 end
