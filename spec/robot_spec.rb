@@ -32,7 +32,7 @@ describe Robot do
 
   describe 'Name' do
     it 'should exist' do
-      expect(@robot1.name).to exist
+      expect(@robot1.name).to be_truthy
     end
     it 'should be be a string' do
       expect(@robot1.name).to be_instance_of String
