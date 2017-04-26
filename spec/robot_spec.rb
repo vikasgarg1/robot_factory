@@ -58,8 +58,8 @@ describe Robot do
     end
     it 'last two characters should be numbers' do
       arr = @robot1.name.split('')
-      expect(arr[3].to_i).to be_instance_of Integer
-      expect(arr[4].to_i).to be_instance_of Integer
+      expect(arr[3].to_i).to be_instance_of Fixnum
+      expect(arr[4].to_i).to be_instance_of Fixnum
     end
   end
 
